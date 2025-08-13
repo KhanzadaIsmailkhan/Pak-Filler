@@ -27,6 +27,7 @@ pnpm-debug.log*
 # OS files
 .DS_Store
 Thumbs.db
+<<<<<<< Updated upstream
 
 # Vercel
 .vercel
@@ -39,3 +40,9 @@ out/
 # Uploads
 backend/src/uploads/*
 !backend/src/uploads/.gitkeep
+=======
+.vercel
+>>>>>>> Stashed changes
+/be-filler/.next/cache/webpack/client-development
+/be-filler/.next/cache/webpack
+/be-filler/.next/cache

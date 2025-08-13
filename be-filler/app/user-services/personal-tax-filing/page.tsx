@@ -354,46 +354,42 @@ const TaxFilingsPage = () => {
 
   const handleOpenModal = () => setIsModalOpen(true)
 
-  const handleCreateFiling = async (data: { taxYear: number; filingType: "individual" | "business" }) => {
-    try {
-      const response = await fetch("http://localhost:5000/api/tax-filing/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${Cookies.get("token")}`,
-        },
-        body: JSON.stringify({
-          taxYear: data.taxYear,
-          filingType: data.filingType,
-          userId: user._id,
-        }),
-      })
+ const handleCreateFiling = async (data: { taxYear: number; filingType: "individual" | "business" }) => {
+  try {
+    // Simulate creating filing locally (no API call)
+    const newFilingId = Date.now().toString(); // unique id from timestamp
 
-      if (!response.ok) {
-        throw new Error(`Failed to create tax filing: ${response.status}`)
-      }
+    // Close modal
+    setIsModalOpen(false);
 
-      const result = await response.json()
-      const newFilingId = result.data.id
+    // Show success toast
+    toast({
+      title: "Success",
+      description: `Tax filing for ${data.taxYear} created successfully (local only).`,
+    });
 
-      setIsModalOpen(false)
-      toast({
-        title: "Success",
-        description: `Tax filing for ${data.taxYear} created successfully.`,
-      })
-      router.push(`/user-services/personal-tax-filing/${newFilingId}/`)
+    // Redirect to new filing page
+    router.push(`/user-services/personal-tax-filing/${newFilingId}/`);
 
-      // Reload filings to reflect the new filing
-      await loadFilings()
-    } catch (error) {
-      console.error("Error creating tax filing:", error)
-      toast({
-        title: "Error",
-        description: "Failed to create tax filing. Please try again.",
-        variant: "destructive",
-      })
-    }
+    // Optionally: update local state for filings list
+    // Example: if you have `setFilings`, push the new filing
+    // setFilings(prev => [
+    //   ...prev,
+    //   { id: newFilingId, taxYear: data.taxYear, filingType: data.filingType, status: "Draft" }
+    // ]);
+
+    // Reload filings if needed
+    await loadFilings?.();
+  } catch (error) {
+    console.error("Error creating tax filing:", error);
+    toast({
+      title: "Error",
+      description: "Failed to create tax filing locally.",
+      variant: "destructive",
+    });
   }
+};
+
 
   const handleResumeFiling = (filingId: string) => {
     router.push(`/user-services/personal-tax-filing/${filingId}/`)
@@ -533,7 +529,7 @@ const TaxFilingsPage = () => {
         {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Family Tax Filings</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Personal Tax Filings</h1>
             <p className="text-gray-600">Manage and track your family tax filing submissions</p>
           </div>
           <div className="flex gap-2 mt-4 sm:mt-0">

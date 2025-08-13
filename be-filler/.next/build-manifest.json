@@ -5,6 +5,7 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
+<<<<<<< Updated upstream
     "static/fujrPF8IzZ1nNj_Gh0NVn/_buildManifest.js",
     "static/fujrPF8IzZ1nNj_Gh0NVn/_ssgManifest.js"
   ],
@@ -13,18 +14,36 @@
     "static/chunks/4bd1b696-68eab6ec278fac09.js",
     "static/chunks/1684-c41e8e785837e7fc.js",
     "static/chunks/main-app-44727ba15338a6c3.js"
+=======
+    "static/MoROHWO4EBPA2S21i83SJ/_buildManifest.js",
+    "static/MoROHWO4EBPA2S21i83SJ/_ssgManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/webpack-80f6b98a2dbba2a8.js",
+    "static/chunks/4bd1b696-68eab6ec278fac09.js",
+    "static/chunks/1684-c41e8e785837e7fc.js",
+    "static/chunks/main-app-5a086ea04baab8f3.js"
+>>>>>>> Stashed changes
   ],
   "rootMainFilesTree": {},
   "pages": {
     "/_app": [
+<<<<<<< Updated upstream
       "static/chunks/webpack-2940029d609a132a.js",
+=======
+      "static/chunks/webpack-80f6b98a2dbba2a8.js",
+>>>>>>> Stashed changes
       "static/chunks/framework-cc9da055f187cabc.js",
       "static/chunks/main-b148922b60b65faf.js",
       "static/css/19c5168eb1cc5f7c.css",
       "static/chunks/pages/_app-2a5fc4711e982470.js"
     ],
     "/_error": [
+<<<<<<< Updated upstream
       "static/chunks/webpack-2940029d609a132a.js",
+=======
+      "static/chunks/webpack-80f6b98a2dbba2a8.js",
+>>>>>>> Stashed changes
       "static/chunks/framework-cc9da055f187cabc.js",
       "static/chunks/main-b148922b60b65faf.js",
       "static/chunks/pages/_error-c7c83e9cf959d240.js"

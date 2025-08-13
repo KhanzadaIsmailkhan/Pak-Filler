@@ -25,11 +25,19 @@
       "wasm": [],
       "assets": [],
       "env": {
+<<<<<<< Updated upstream
         "__NEXT_BUILD_ID": "fujrPF8IzZ1nNj_Gh0NVn",
         "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "5IP6Q0ltBVm0mCc/Pi7MJNVMbOOZfQ6IRMXnNngntcA=",
         "__NEXT_PREVIEW_MODE_ID": "d11ce75c08231f41c0f8ca43da8c55fb",
         "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "fe3674c3c21f20c242bc19059795a887a28728904ea64910a9795444d09f449a",
         "__NEXT_PREVIEW_MODE_SIGNING_KEY": "de9df2611c55569c89aaa69d02fc537d3989d0d4fcc06ce7b937c6aac8cdd58d"
+=======
+        "__NEXT_BUILD_ID": "MoROHWO4EBPA2S21i83SJ",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "q2kLFOj8Gu6obFDylyTKXGIZPxhFnD12GWfe1He8rcc=",
+        "__NEXT_PREVIEW_MODE_ID": "037128ffefd8e323823fa9c2e70e526f",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "1ba2871cf5faecfbe9c6678789b039df23d834d0f0ac30ddf30ea407f1bb9c78",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "fc2c3556ec9484883ec775d6a9d38b70ad0280a786e4f9d62492f75782d07f26"
+>>>>>>> Stashed changes
       }
     }
   },
