@@ -146,7 +146,7 @@ export default function WealthStatementsPage() {
             formData.append("userId", user.id)
 
             const response = await axiosInstance.post(
-                "http://localhost:3001/api/v1/secure/document/post-docs",
+                "https://backend-production-5fad.up.railway.app/api/v1/secure/document/post-docs",
                 formData,
                 {
                     headers: {

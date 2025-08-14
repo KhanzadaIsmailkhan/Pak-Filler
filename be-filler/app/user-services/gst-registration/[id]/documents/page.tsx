@@ -64,7 +64,7 @@ const DocumentUpload = () => {
 
         try {
             const token = Cookies.get("token");
-            const response = await axios.get(`http://localhost:5000/api/gst`, {
+            const response = await axios.get(`https://backend-production-5fad.up.railway.app/api/gst`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
@@ -98,7 +98,7 @@ const DocumentUpload = () => {
             formData.append("docType", docType);
 
             await axios.post(
-                `http://localhost:5000/api/gst/upload-document`,
+                `https://backend-production-5fad.up.railway.app/api/gst/upload-document`,
                 formData,
                 {
                     headers: {

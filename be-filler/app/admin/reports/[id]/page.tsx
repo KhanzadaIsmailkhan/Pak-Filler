@@ -74,7 +74,7 @@ export default function DocumentReportsDetail() {
                     throw new Error("No authentication token found")
                 }
 
-                const response = await fetch(`http://localhost:5000/api/admin/documents?userId=${id}`, {
+                const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents?userId=${id}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -225,7 +225,7 @@ export default function DocumentReportsDetail() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/documents/${documentId}?reportType=detailed`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/${documentId}?reportType=detailed`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -357,7 +357,7 @@ export default function DocumentReportsDetail() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/documents/report?reportType=summary&userId=${id}`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/report?reportType=summary&userId=${id}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,

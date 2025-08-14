@@ -62,7 +62,7 @@ export default function UsersTable() {
                     throw new Error('No authentication token found')
                 }
 
-                const response = await fetch('http://localhost:5000/api/user/all', {
+                const response = await fetch('https://backend-production-5fad.up.railway.app/api/user/all', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ export default function UsersTable() {
                 throw new Error('No authentication token found')
             }
 
-            const response = await fetch(`http://localhost:5000/api/user/${userId}/role`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/user/${userId}/role`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -139,7 +139,7 @@ export default function UsersTable() {
                 throw new Error('No authentication token found')
             }
 
-            const response = await fetch(`http://localhost:5000/api/user/${userId}/status`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/user/${userId}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

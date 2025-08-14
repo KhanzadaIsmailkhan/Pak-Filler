@@ -54,7 +54,7 @@ export default function TaxFilingManagement() {
         const fetchTaxFilings = async () => {
             const token = Cookies.get('token')
             try {
-                const response = await fetch("http://localhost:5000/api/admin/documents/tax-filings", {
+                const response = await fetch("https://backend-production-5fad.up.railway.app/api/admin/documents/tax-filings", {
                     headers: {
                         Authorization: `Bearer ${user.token}`,
                     },

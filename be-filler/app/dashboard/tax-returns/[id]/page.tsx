@@ -51,7 +51,7 @@ export default function TaxFilingDetailsPage() {
 
         const fetchTaxFiling = async () => {
             try {
-                const id = params.id as string
+                const id = params?.id as string
                 console.log("Fetching tax filing with id:", id)
                 if (!id) {
                     throw new Error("Tax filing ID is missing")
@@ -78,7 +78,7 @@ export default function TaxFilingDetailsPage() {
         }
 
         fetchTaxFiling()
-    }, [router, params.id])
+    }, [router, params?.id])
 
     if (loading) {
         return (
@@ -164,7 +164,7 @@ export default function TaxFilingDetailsPage() {
                                 </div>
                                 <div className="flex">
                                     <dt className="font-medium w-1/3">Last Updated:</dt>
-                                    <dd className="w-2/3">{formatDate(filing.updatedAt || "")}</dd>
+                                    <dd className="w-2/3">{formatDate(filing.updatedAt ? filing.updatedAt.toISOString() : "")}</dd>
                                 </div>
                             </dl>
                         </div>
@@ -198,16 +198,16 @@ export default function TaxFilingDetailsPage() {
                         <div className="mt-6">
                             <h3 className="text-lg font-semibold mb-2">Attached Documents</h3>
                             <ul className="space-y-2">
-                                {filing.documents.map(doc => (
-                                    <li key={doc.id} className="flex items-center">
+                                {filing.documents.map((doc: { id?: string; fileUrl?: string; name?: string } | string, idx: number) => (
+                                    <li key={typeof doc === "string" ? doc : doc.id ?? idx} className="flex items-center">
                                         <FileText className="h-4 w-4 mr-2 text-[#af0e0e]" />
                                         <a
-                                            href={doc.fileUrl}
+                                            href={typeof doc === "string" ? doc : doc.fileUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-[#af0e0e] hover:underline"
                                         >
-                                            {doc.name || "Document"}
+                                            {typeof doc === "string" ? "Document" : doc.name || "Document"}
                                         </a>
                                     </li>
                                 ))}

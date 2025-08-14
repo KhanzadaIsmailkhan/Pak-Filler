@@ -24,7 +24,7 @@ export default function AccountantDashboard() {
       if (!token) return router.push("/auth/login")
 
       try {
-        const res = await fetch("http://localhost:5000/api/auth/profile", {
+        const res = await fetch("https://backend-production-5fad.up.railway.app/api/auth/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

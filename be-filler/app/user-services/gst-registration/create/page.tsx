@@ -49,7 +49,7 @@ const getAuthToken = () => {
             setIsSubmitting(true);
            const token = Cookies.get("token");
             const response = await axios.post(
-                `http://localhost:5000/api/gst/business-details`,
+                `https://backend-production-5fad.up.railway.app/api/gst/business-details`,
                 {
                     businessName,
                     businessType,

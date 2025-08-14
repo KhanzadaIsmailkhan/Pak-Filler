@@ -173,7 +173,7 @@ export default function AddServiceCharge() {
         setLoading(true)
         try {
             await axios.post(
-                "http://localhost:5000/api/service-charge",
+                "https://backend-production-5fad.up.railway.app/api/service-charge",
                 {
                     category: category === "Custom" ? customCategory : category,
                     services: services.map((service) => ({

@@ -200,7 +200,7 @@ export default function NotificationsPage() {
                                                     <Button
                                                         variant="ghost"
                                                         size="sm"
-                                                        onClick={() => handleMarkAsRead(notification._id)}
+                                                        onClick={() => handleMarkAsRead(notification.id)}
                                                     >
                                                         <CheckCircle className="h-4 w-4 mr-1" /> Mark as Read
                                                     </Button>

@@ -60,7 +60,7 @@ const GstRegistrationsPage = () => {
         try {
             setLoading(true);
             const token = Cookies.get("token");
-            const response = await axios.get(`http://localhost:5000/api/gst`, {
+            const response = await axios.get(`https://backend-production-5fad.up.railway.app//api/gst`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

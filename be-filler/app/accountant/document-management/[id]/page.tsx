@@ -25,7 +25,7 @@ export default function DocumentDetail() {
   const { toast } = useToast();
   const [document, setDocument] = useState<any | null>(null);
   const [loading, setLoading] = useState(true);
-  const baseUrl = "http://localhost:5000/api/admin";
+  const baseUrl = "https://backend-production-5fad.up.railway.app/api/admin";
   const user = getCurrentUser();
 
   if (!user || user?.role !== "accountant") {
@@ -141,7 +141,7 @@ export default function DocumentDetail() {
   const handleViewFile = async () => {
     if (!document?.fileUrl) return;
     try {
-      window.open(`http://localhost:5000/uploads/${document.fileUrl}`, "_blank");
+      window.open(`https://backend-production-5fad.up.railway.app/uploads/${document.fileUrl}`, "_blank");
     } catch (e: any) {
       console.error("View document error:", e);
       toast({

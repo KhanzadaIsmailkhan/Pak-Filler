@@ -33,7 +33,7 @@ const ReviewGstRegistration = () => {
             setLoading(true);
             const token = Cookies.get("token");
 
-            const res = await fetch("http://localhost:5000/api/gst", {
+            const res = await fetch("https://backend-production-5fad.up.railway.app/api/gst", {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
@@ -77,7 +77,7 @@ const ReviewGstRegistration = () => {
             setSubmitting(true);
             const token = Cookies.get("token");
 
-            const res = await fetch("http://localhost:5000/api/gst/submit", {
+            const res = await fetch("https://backend-production-5fad.up.railway.app/api/gst/submit", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

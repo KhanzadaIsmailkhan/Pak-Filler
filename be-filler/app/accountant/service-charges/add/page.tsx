@@ -178,7 +178,7 @@ export default function AddServiceCharge() {
                 throw new Error("No authentication token found")
             }
             await axios.post(
-                "http://localhost:5000/api/service-charge",
+                "https://backend-production-5fad.up.railway.app/api/service-charge",
                 {
                     category: category === "Custom" ? customCategory : category,
                     services: services.map((service) => ({

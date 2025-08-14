@@ -84,7 +84,7 @@ export default function EditServiceCharge() {
                     throw new Error("No authentication token found")
                 }
                 const response = await axios.get<{ data: ServiceCharge[] }>(
-                    "http://localhost:5000/api/service-charge",
+                    "https://backend-production-5fad.up.railway.app/api/service-charge",
                     { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` } }
                 )
                 const serviceChargeData = response.data.data.find(
@@ -259,7 +259,7 @@ export default function EditServiceCharge() {
                 throw new Error("No authentication token found")
             }
             const response = await axios.get<{ data: ServiceCharge[] }>(
-                "http://localhost:5000/api/service-charge",
+                "https://backend-production-5fad.up.railway.app/api/service-charge",
                 { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` } }
             )
             const serviceChargeData = response.data.data.find(
@@ -269,7 +269,7 @@ export default function EditServiceCharge() {
                 throw new Error("Service charge not found")
             }
             await axios.patch(
-                `http://localhost:5000/api/service-charge/${serviceChargeData._id}`,
+                `https://backend-production-5fad.up.railway.app/api/service-charge/${serviceChargeData._id}`,
                 {
                     category: selectedCategory === "Custom" ? customCategory : selectedCategory,
                     services: services.map((service) => ({

@@ -94,7 +94,7 @@ const BusinessIncorporationPage = () => {
 
                 const token = Cookies.get("token");
                 console.log("Token:", Cookies.get("token"));
-                const response = await fetch("http://localhost:5000/api/business-incorporation", {
+                const response = await fetch("https://backend-production-5fad.up.railway.app/api/business-incorporation", {
                     method: "GET",
                     headers: {
                         Authorization: `Bearer ${token}`,

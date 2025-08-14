@@ -44,7 +44,7 @@ const GstRegistrationDetail = () => {
     const { toast } = useToast();
     const router = useRouter();
     const params = useParams(); // Returns { id: string | string[] }
-    const gstRegId = Array.isArray(params.id) ? params.id[0] : params.id;
+    const gstRegId = Array.isArray(params?.id) ? params.id[0] : params?.id;
 
     if (!gstRegId) {
         return <span>No id found</span>;

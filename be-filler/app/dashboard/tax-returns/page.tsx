@@ -180,7 +180,7 @@ export default function TaxReturnsPage() {
                     uploadFormData.append("notes", formData.notes)
 
                     const response = await axiosInstance.post(
-                        "http://localhost:3001/api/v1/secure/document/post-docs",
+                        "https://backend-production-5fad.up.railway.app/api/v1/secure/document/post-docs",
                         uploadFormData,
                         {
                             headers: { "Content-Type": "multipart/form-data" },
@@ -478,7 +478,7 @@ export default function TaxReturnsPage() {
                                 </TableHeader>
                                 <TableBody>
                                     {filteredFilings.map((filing) => (
-                                        <TableRow key={filing.id}>
+                                        <TableRow key={String(filing.id ?? filing._id)}>
                                             <TableCell>{filing.taxYear}</TableCell>
                                             <TableCell>{formatDate(filing.createdAt || "")}</TableCell>
                                             <TableCell>

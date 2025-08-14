@@ -36,7 +36,7 @@ export default function DocumentManagement() {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/api/admin/documents", {
+        const response = await axios.get("https://backend-production-5fad.up.railway.app/api/admin/documents", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -144,7 +144,7 @@ export default function DocumentManagement() {
                       {doc.fileUrl ? (
                         /\.(jpe?g|png|gif)$/i.test(doc.fileUrl) ? (
                           <img
-                            src={`http://localhost:5000/uploads/${doc.fileUrl}`}
+                            src={`https://backend-production-5fad.up.railway.app/uploads/${doc.fileUrl}`}
                             alt="preview"
                             className="h-10 w-10 object-cover rounded"
                             onError={(e) => {
@@ -153,7 +153,7 @@ export default function DocumentManagement() {
                           />
                         ) : (
                           <a
-                            href={`http://localhost:5000/uploads/${doc.fileUrl}`}
+                            href={`https://backend-production-5fad.up.railway.app/uploads/${doc.fileUrl}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-blue-600 underline"

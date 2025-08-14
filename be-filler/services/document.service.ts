@@ -22,6 +22,7 @@ export interface UpdateDocumentDto {
 
 // Define interface for the document data structure
 export interface IDocument {
+  _id: any;
   id: string;
   name: string;
   type: string;
@@ -43,6 +44,7 @@ export interface IDocument {
 }
 
 export class DocumentService extends BaseService {
+  lastResponse: any;
   constructor() {
     const documentAxiosInstance = axiosInstance.create();
     super(axiosInstance, "/api/v1/secure/document");

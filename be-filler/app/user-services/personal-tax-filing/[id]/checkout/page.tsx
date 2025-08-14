@@ -207,7 +207,7 @@ const uploadPaymentProof = async (): Promise<string | null> => {
     formData.append('paymentMethod', 'bank_transfer');
 
     const response = await axios.post(
-      'http://localhost:5000/api/tax-filing/upload-payment-proof',
+      'https://backend-production-5fad.up.railway.app/api/tax-filing/upload-payment-proof',
       formData,
       {
         headers: {
@@ -330,7 +330,7 @@ const uploadPaymentProof = async (): Promise<string | null> => {
       }
 
       const response = await axios.post(
-  "http://localhost:5000/api/tax-filing/comprehensive/submit",
+  "https://backend-production-5fad.up.railway.app/api/tax-filing/comprehensive/submit",
   payload,
   { headers }
 );

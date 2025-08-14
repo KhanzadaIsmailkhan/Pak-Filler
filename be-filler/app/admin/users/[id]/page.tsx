@@ -94,7 +94,7 @@ export default function UserDetail() {
                 console.log("Fetching user data for userId:", userId)
 
                 // Fetch documents for the user
-                const documentsResponse = await fetch(`http://localhost:5000/api/admin/documents?userId=${userId}`, {
+                const documentsResponse = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents?userId=${userId}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,
@@ -138,7 +138,7 @@ export default function UserDetail() {
                     setDocumentStats(docStats)
 
                     // Fetch tax filing stats
-                    const taxFilingsResponse = await fetch(`http://localhost:5000/api/admin/documents/tax-filings?userId=${userId}`, {
+                    const taxFilingsResponse = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/tax-filings?userId=${userId}`, {
                         method: 'GET',
                         headers: {
                             'Authorization': `Bearer ${token}`,
@@ -161,7 +161,7 @@ export default function UserDetail() {
                     setTaxFilingStats(taxStats)
 
                     // Fetch timeline data
-                    const timelineResponse = await fetch(`http://localhost:5000/api/admin/documents/timeline?days=30&userId=${userId}`, {
+                    const timelineResponse = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/timeline?days=30&userId=${userId}`, {
                         method: 'GET',
                         headers: {
                             'Authorization': `Bearer ${token}`,
@@ -210,7 +210,7 @@ export default function UserDetail() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/users/${user._id}/role`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/users/${user._id}/role`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -246,7 +246,7 @@ export default function UserDetail() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/users/${user._id}/status`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/users/${user._id}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

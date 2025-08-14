@@ -24,7 +24,7 @@ export default function AdminDashboard() {
       if (!token) return router.push("/auth/login")
 
       try {
-        const res = await fetch("http://localhost:5000/api/auth/profile", {
+        const res = await fetch("https://backend-production-5fad.up.railway.app/api/auth/profile", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -49,14 +49,14 @@ export default function AdminDashboard() {
 
     const fetchStatistics = async (token: string) => {
       try {
-        const dashboardRes = await fetch("http://localhost:5000/api/admin/documents/dashboard", {
+        const dashboardRes = await fetch("https://backend-production-5fad.up.railway.app/api/admin/documents/dashboard", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
         })
 
-        const chargeRes = await fetch("http://localhost:5000/api/service-charge/count", {
+        const chargeRes = await fetch("https://backend-production-5fad.up.railway.app/api/service-charge/count", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

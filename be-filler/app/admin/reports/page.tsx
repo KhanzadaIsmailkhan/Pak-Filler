@@ -42,7 +42,7 @@ export default function DocumentReports() {
                     throw new Error("No authentication token found")
                 }
 
-                const response = await fetch('http://localhost:5000/api/admin/documents', {
+                const response = await fetch('https://backend-production-5fad.up.railway.app/api/admin/documents', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

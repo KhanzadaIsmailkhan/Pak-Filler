@@ -79,7 +79,7 @@ export default function ServiceChargesManagement() {
                     throw new Error("No authentication token found")
                 }
                 const response = await axios.get<{ data: ServiceCharge[] }>(
-                    "http://localhost:5000/api/service-charge",
+                    "https://backend-production-5fad.up.railway.app/api/service-charge",
                     { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` } }
                 )
                 const data = response.data.data.map(sc => ({
@@ -142,7 +142,7 @@ export default function ServiceChargesManagement() {
                 throw new Error("No authentication token found")
             }
             const response = await axios.get<{ data: ServiceCharge[] }>(
-                "http://localhost:5000/api/service-charge",
+                "https://backend-production-5fad.up.railway.app/api/service-charge",
                 { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` } }
             )
             const serviceCharge = response.data.data.find((sc) => sc.category === categoryToDelete)
@@ -150,7 +150,7 @@ export default function ServiceChargesManagement() {
                 throw new Error("Service charge not found")
             }
             await axios.delete(
-                `http://localhost:5000/api/service-charge/${serviceCharge._id}`,
+                `hhttps://backend-production-5fad.up.railway.app/api/service-charge/${serviceCharge._id}`,
                 { headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` } }
             )
             setServiceCharges((prev) => prev.filter((sc) => sc.category !== categoryToDelete))

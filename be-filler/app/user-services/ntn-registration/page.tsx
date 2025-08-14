@@ -64,7 +64,7 @@ if (!token) {
     throw new Error("Authentication token not found");
 }
 
-            const response = await fetch('http://localhost:5000/api/iris-profile', {
+            const response = await fetch('https://backend-production-5fad.up.railway.app/api/iris-profile', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'

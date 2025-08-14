@@ -80,8 +80,8 @@ const CreateIrisProfile = () => {
                 }
 
                 const [profileResponse, irisResponse] = await Promise.all([
-                    fetch('http://localhost:5000/api/auth/profile', { headers }),
-                    fetch('http://localhost:5000/api/iris-profile', { headers })
+                    fetch('https://backend-production-5fad.up.railway.app/api/auth/profile', { headers }),
+                    fetch('https://backend-production-5fad.up.railway.app/api/iris-profile', { headers })
                 ]);
 
                 if (!profileResponse.ok) {

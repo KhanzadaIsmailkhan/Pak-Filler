@@ -49,7 +49,7 @@ export default function DocumentManagement() {
           return;
         }
 
-        const response = await axios.get("http://localhost:5000/api/admin/documents", {
+        const response = await axios.get("https://backend-production-5fad.up.railway.app/api/admin/documents", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

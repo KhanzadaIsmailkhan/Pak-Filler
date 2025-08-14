@@ -84,7 +84,7 @@ export default function AdminTaxFilingDetails() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/documents/tax-filings/${taxFilingId}`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/tax-filings/${taxFilingId}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -145,7 +145,7 @@ export default function AdminTaxFilingDetails() {
                 throw new Error("No authentication token found")
             }
 
-            const response = await fetch(`http://localhost:5000/api/admin/documents/tax-filings/${taxFilingId}/status`, {
+            const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/tax-filings/${taxFilingId}/status`, {
                 method: 'PATCH',
                 headers: {
                     'Authorization': `Bearer ${token}`,

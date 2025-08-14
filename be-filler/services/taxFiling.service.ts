@@ -1,5 +1,6 @@
 import { axiosInstance } from "@/lib/ApiClient";
 import { BaseService } from "./base.service";
+import { Key } from "readline";
 
 export interface CreateTaxFilingDto {
   taxYear: number;
@@ -239,6 +240,11 @@ export interface INTN {
 }
 
 export interface ITaxFiling {
+  notes: any;
+  filedBy: string;
+  taxPaid: any;
+  grossIncome: any;
+  id: Key | null | undefined;
   _id: string;
   user: string;
   taxYear: number;

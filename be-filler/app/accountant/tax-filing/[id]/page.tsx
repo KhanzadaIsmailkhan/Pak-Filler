@@ -103,7 +103,7 @@ export default function TaxFilingDetails() {
     useEffect(() => {
         const fetchFilingAndUser = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/admin/documents/tax-filings/${id}`, {
+                const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/documents/tax-filings/${id}`, {
                     headers: {
                         Authorization: `Bearer ${user.token}`,
                     },

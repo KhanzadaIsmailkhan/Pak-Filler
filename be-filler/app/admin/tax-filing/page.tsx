@@ -122,7 +122,7 @@ export default function TaxFilingManagement() {
                     params.append('status', filters.status)
                 }
 
-                const response = await fetch(`http://localhost:5000/api/admin/tax-filings?${params.toString()}`, {
+                const response = await fetch(`https://backend-production-5fad.up.railway.app/api/admin/tax-filings?${params.toString()}`, {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`,

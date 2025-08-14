@@ -55,7 +55,7 @@ async function registerUser(data: {
   role: string
 }): Promise<{ success: boolean; message?: string }> {
   try {
-    const response = await axios.post("http://localhost:5000/api/auth/register", {
+    const response = await axios.post("https://backend-production-5fad.up.railway.app/api/auth/register", {
       email: data.email,
       fullName: data.fullName,
       phone: data.phoneNumber,
@@ -92,7 +92,7 @@ export default function SignupPage() {
       role: "user",
       password: "",
       confirmPassword: "",
-      terms: false,
+      terms: true,
     },
   })
 

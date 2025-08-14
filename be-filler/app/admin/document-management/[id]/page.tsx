@@ -25,7 +25,7 @@ export default function DocumentDetail() {
     const { toast } = useToast()
     const [document, setDocument] = useState<any | null>(null)
     const [loading, setLoading] = useState(true)
-    const baseUrl = 'http://localhost:5000/api/admin'
+    const baseUrl = 'https://backend-production-5fad.up.railway.app/api/admin'
 
     const user = getCurrentUser()
     if (!user || user?.role !== 'admin') {
